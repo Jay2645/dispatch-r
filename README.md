@@ -22,10 +22,18 @@ Dispatch-R is planned to be able to manage several aspects of your model railroa
 
 * Connections to your smart home and IOT devices via software like [Home Assistant](https://www.home-assistant.io/) or protocols like MQTT. (**Not made yet**)
 
+## Building from Source [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Jay2645/dispatch-r/issues)
+
+Contributions to the project are always welcome. This program is broken into 2 parts:
+
+1. The frontend is a web application using Yew. This serves content on a webpage.
+
+2. The backend is a Tauri application, which starts a webserver and renders it inside the window.
+
+To set up your dev environment, [follow the Tauri documentation to make sure you can develop a Tauri app.](https://tauri.app/v1/guides/getting-started/prerequisites) This will also walk you through installing Rust.
+
+[You should also set up Yew.](https://yew.rs/docs/getting-started/introduction) This is necessary for running the frontend.
+
 ## License
 
 This program is released under the terms of the GNU General Public License (GPL) v3.
-
-## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Jay2645/dispatch-r/issues)
-
-Contributions to the project are always welcome.
