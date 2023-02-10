@@ -1,14 +1,18 @@
-use yew::prelude::*;
+#![recursion_limit = "1024"]
 
-fn main() {
-    yew::Renderer::<App>::new().render();
-}
+mod app;
+mod components;
+mod counter;
+mod example;
+mod full;
+mod index;
+mod layouts;
 
-#[function_component(App)]
-pub fn app() -> Html {
-    html! {
-        <div>
-            <h2 class={"heading"}>{"Hello, world!"}</h2>
-        </div>
-    }
+use log::Level;
+use wasm_bindgen::prelude::*;
+
+pub fn main() -> Result<(), JsValue> {
+    wasm_logger::init(wasm_logger::Config::new(Level::Debug));
+    yew::Renderer::<app::Application>::new().render();
+    Ok(())
 }

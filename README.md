@@ -32,7 +32,7 @@ Contributions to the project are always welcome. This program is broken into 2 p
 
 To set up your dev environment, [follow the Tauri documentation to make sure you can develop a Tauri app.](https://tauri.app/v1/guides/getting-started/prerequisites) This will also walk you through installing Rust.
 
-[You should also set up Yew.](https://yew.rs/docs/getting-started/introduction) This is necessary for running the frontend.
+[You should also set up Yew](https://yew.rs/docs/getting-started/introduction) and [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) This is necessary for running the frontend. Once both are installed, go to `src-frontend` and run `npm install` to install all required Node.js modules.
 
 In debug mode, Yew will start a server on localhost:8080, which Tauri connects to. Yew supports "live editing", so you can make changes to the frontend, save, and your changes will be compiled/automatically pushed to what you see in the window.
 
