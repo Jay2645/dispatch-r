@@ -16,7 +16,7 @@
             ]
           },
           // task for the `beforeDevCommand` if used, must be configured in `.vscode/tasks.json`
-          //"preLaunchTask": "ui:dev"
+          "preLaunchTask": "frontend:dev"
         },
         {
           "type": "lldb",
@@ -26,7 +26,7 @@
             "args": ["build", "--release", "--manifest-path=./src-backend/Cargo.toml"]
           },
           // task for the `beforeBuildCommand` if used, must be configured in `.vscode/tasks.json`
-          //"preLaunchTask": "ui:build"
+          "preLaunchTask": "frontend:build"
         }
     ]
 }

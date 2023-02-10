@@ -1,5 +1,5 @@
 [package]
-name = "dispatch-r-backend"
+name = "dispatch-r"
 version = "0.0.1"
 edition = "2021"
 authors = ["Jay Stevens <dispatch-r@jaystevens.me>"]

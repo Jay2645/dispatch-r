@@ -3,9 +3,22 @@
   windows_subsystem = "windows"
 )]
 
+#[cfg(not(debug_assertions))]
 use tauri::{utils::config::AppUrl, WindowUrl};
 
-fn main() {
+#[cfg(debug_assertions)]
+fn open_window() {
+  // When running in debug, don't start our own webserver port - use the one provided by the frontend
+  tauri::Builder::default()
+    .run(tauri::generate_context!())
+    .expect("error while running tauri application");
+}
+
+#[cfg(not(debug_assertions))]
+fn open_window() {
+  // When not running in debug, we bake the frontend code into the backend
+  // This means we should serve our own webserver
+
   // Default webserver port is 12180
   let port = 12180;
 
@@ -22,4 +35,8 @@ fn main() {
     .plugin(tauri_plugin_localhost::Builder::new(port).build())
     .run(context)
     .expect("error while running tauri application");
+}
+
+fn main() {
+  open_window();
 }

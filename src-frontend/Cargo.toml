@@ -1,0 +1,16 @@
+[package]
+name = "dispatch-r-frontend"
+version = "0.0.1"
+edition = "2021"
+authors = ["Jay Stevens <dispatch-r@jaystevens.me>"]
+description = "Dispatch-R is an easy-to-use model railroad automation software, written in Rust. This is the frontend, which communicates with the backend."
+repository = "https://github.com/Jay2645/dispatch-r"
+readme = "../README.md"
+license = "GPL-3.0-or-later"
+categories = ["science::robotics", "games"]
+rust-version = "1.56.1"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew = { version = "0.20", features = ["csr"] }

@@ -34,6 +34,10 @@ To set up your dev environment, [follow the Tauri documentation to make sure you
 
 [You should also set up Yew.](https://yew.rs/docs/getting-started/introduction) This is necessary for running the frontend.
 
+In debug mode, Yew will start a server on localhost:8080, which Tauri connects to. Yew supports "live editing", so you can make changes to the frontend, save, and your changes will be compiled/automatically pushed to what you see in the window.
+
+In release mode, the frontend is "baked" into the backend - you cannot do live updates. However, you can still connect to Tauri itself and see the output of the program on other machines.
+
 ## License
 
 This program is released under the terms of the GNU General Public License (GPL) v3.
